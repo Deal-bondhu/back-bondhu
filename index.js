@@ -1474,6 +1474,10 @@ app.get("/leaderboard", async (req, res) => {
   res.send(leaderboard);
 });
 
+
+          // month rising star part
+
+
 app.get("/monthly_rising_stars", async (req, res) => {
   const client = await dbConnect();
   const db = client.db(db_database.deal_bondhu_database);
@@ -1592,6 +1596,10 @@ app.put("/update_heading_marquee_text", async (req, res) => {
   );
   res.send(result);
 });
+
+
+              // intent score part 
+
 
 app.post("/calculate_intent_score", async (req, res) => {
   const agent = user_agent.parse(req.headers["user-agent"]);
